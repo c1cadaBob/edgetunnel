@@ -1,22 +1,17 @@
-# wrangler.toml
-name = 'edgetunnel'
+name = "edgetunnel"
+main = "src/index.js"
+compatibility_date = "2025-05-15"
 
-main = "_worker.js"
-compatibility_date = "2025-11-04"
-keep_vars = true
+[[routes]]
+pattern = "edge1.c1cada.ccwu.cc"
+zone_name = "c1cada.ccwu.cc"
 
-# ...
-[vars]
-ADMIN = "BBh@20050305"
-# ...
+[observability.logs]
+enabled = true
 
-# ...
 [[kv_namespaces]]
 binding = "KV"
 id = "3eade0fd9c5941249a2c8a44563824d6"
-# ...
 
-
-#[[kv_namespaces]]
-#binding = "KV"			#KV绑定名默认不可修改
-#id = ""				#KV数据库id
+[vars]
+ADMIN = "BBh@20050305"
