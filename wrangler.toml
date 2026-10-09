@@ -1,5 +1,5 @@
 name = "edgetunnel"
-main = "src/index.js"
+main = "_worker.js"
 compatibility_date = "2025-05-15"
 
 [[routes]]
